@@ -4,7 +4,6 @@ import com.hazz.kotlinmvp.mvp.model.bean.HomeBean
 import com.hazz.kotlinmvp.net.RetrofitManager
 import com.hazz.kotlinmvp.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
-import java.util.*
 
 /**
  * Created by xuhao on 2017/11/30.

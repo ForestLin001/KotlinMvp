@@ -19,13 +19,13 @@ import java.util.concurrent.TimeUnit
  *
  */
 
-object RetrofitManager{
+object RetrofitManager {
 
-    val service: ApiService by lazy (LazyThreadSafetyMode.SYNCHRONIZED){
+    val service: ApiService by lazy(LazyThreadSafetyMode.SYNCHRONIZED) {
         getRetrofit().create(ApiService::class.java)
     }
 
-    private var token:String by Preference("token","")
+    private var token: String by Preference("token", "")
 
     /**
      * 设置公共参数

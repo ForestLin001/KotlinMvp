@@ -10,17 +10,17 @@ import com.hazz.kotlinmvp.mvp.model.bean.TabInfoBean
  */
 interface HotTabContract {
 
-    interface View:IBaseView{
+    interface View : IBaseView {
         /**
          * 设置 TabInfo
          */
         fun setTabInfo(tabInfoBean: TabInfoBean)
 
-        fun showError(errorMsg:String,errorCode:Int)
+        fun showError(errorMsg: String, errorCode: Int)
     }
 
 
-    interface Presenter:IPresenter<View>{
+    interface Presenter : IPresenter<View> {
         /**
          * 获取 TabInfo
          */

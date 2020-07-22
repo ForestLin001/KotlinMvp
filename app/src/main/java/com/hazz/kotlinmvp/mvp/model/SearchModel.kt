@@ -24,7 +24,7 @@ class SearchModel {
     /**
      * 搜索关键词返回的结果
      */
-    fun getSearchResult(words: String):Observable<HomeBean.Issue>{
+    fun getSearchResult(words: String): Observable<HomeBean.Issue> {
         return RetrofitManager.service.getSearchData(words)
                 .compose(SchedulerUtils.ioToMain())
     }

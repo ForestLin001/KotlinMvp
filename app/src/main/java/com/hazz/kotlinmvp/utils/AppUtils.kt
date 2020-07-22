@@ -76,12 +76,12 @@ class AppUtils private constructor() {
 
         @SuppressLint("PackageManagerGetSignatures")
                 /**
-         * 获取应用签名
-         *
-         * @param context 上下文
-         * @param pkgName 包名
-         * @return 返回应用的签名
-         */
+                 * 获取应用签名
+                 *
+                 * @param context 上下文
+                 * @param pkgName 包名
+                 * @return 返回应用的签名
+                 */
         fun getSign(context: Context, pkgName: String): String? {
             return try {
                 @SuppressLint("PackageManagerGetSignatures") val pis = context.packageManager

@@ -58,6 +58,7 @@ class CustomBaseGlideUrlLoader(concreteLoader: ModelLoader<GlideUrl, InputStream
     companion object {
 
         private val urlCache = ModelCache<String, GlideUrl>(150)
+
         /**
          * Url的匹配规则
          */

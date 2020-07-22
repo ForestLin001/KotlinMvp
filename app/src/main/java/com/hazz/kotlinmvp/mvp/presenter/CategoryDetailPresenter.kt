@@ -8,28 +8,26 @@ import com.hazz.kotlinmvp.mvp.model.CategoryDetailModel
  * Created by xuhao on 2017/11/30.
  * desc:
  */
-class CategoryDetailPresenter:BasePresenter<CategoryDetailContract.View>(),CategoryDetailContract.Presenter{
+class CategoryDetailPresenter : BasePresenter<CategoryDetailContract.View>(), CategoryDetailContract.Presenter {
 
-   private val categoryDetailModel by lazy {
-       CategoryDetailModel()
-   }
+    private val categoryDetailModel by lazy {
+        CategoryDetailModel()
+    }
 
-    private var nextPageUrl:String?=null
+    private var nextPageUrl: String? = null
 
     /**
      * 获取分类详情的列表信息
      */
     override fun getCategoryDetailList(id: Long) {
         checkViewAttached()
-        val disposable= categoryDetailModel.getCategoryDetailList(id)
-                .subscribe({
-                    issue ->
+        val disposable = categoryDetailModel.getCategoryDetailList(id)
+                .subscribe({ issue ->
                     mRootView?.apply {
                         nextPageUrl = issue.nextPageUrl
                         setCateDetailList(issue.itemList)
                     }
-                },{
-                    throwable ->
+                }, { throwable ->
                     mRootView?.apply {
                         showError(throwable.toString())
                     }

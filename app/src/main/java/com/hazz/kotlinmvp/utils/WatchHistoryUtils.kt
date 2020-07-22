@@ -2,10 +2,10 @@ package com.hazz.kotlinmvp.utils
 
 import android.content.Context
 import android.content.SharedPreferences
-import java.lang.reflect.InvocationTargetException
-import java.lang.reflect.Method
 import android.util.Base64
 import java.io.*
+import java.lang.reflect.InvocationTargetException
+import java.lang.reflect.Method
 
 
 /**
@@ -268,7 +268,7 @@ class WatchHistoryUtils {
         }
 
 
-        fun putObject(fileName: String,context: Context, `object`: Any?,
+        fun putObject(fileName: String, context: Context, `object`: Any?,
                       key: String): Boolean {
             val sp = context.getSharedPreferences(fileName,
                     Context.MODE_PRIVATE)
@@ -309,7 +309,7 @@ class WatchHistoryUtils {
          * @param key
          * @return
          */
-        fun getObject(fileName: String,context: Context, key: String): Any? {
+        fun getObject(fileName: String, context: Context, key: String): Any? {
             val sharePre = context.getSharedPreferences(fileName,
                     Context.MODE_PRIVATE)
             try {

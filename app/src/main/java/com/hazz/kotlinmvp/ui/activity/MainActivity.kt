@@ -10,7 +10,10 @@ import com.hazz.kotlinmvp.R
 import com.hazz.kotlinmvp.base.BaseActivity
 import com.hazz.kotlinmvp.mvp.model.bean.TabEntity
 import com.hazz.kotlinmvp.showToast
-import com.hazz.kotlinmvp.ui.fragment.*
+import com.hazz.kotlinmvp.ui.fragment.DiscoveryFragment
+import com.hazz.kotlinmvp.ui.fragment.HomeFragment
+import com.hazz.kotlinmvp.ui.fragment.HotFragment
+import com.hazz.kotlinmvp.ui.fragment.MineFragment
 import kotlinx.android.synthetic.main.activity_main.*
 import java.util.*
 
@@ -29,6 +32,7 @@ class MainActivity : BaseActivity() {
 
     // 未被选中的图标
     private val mIconUnSelectIds = intArrayOf(R.mipmap.ic_home_normal, R.mipmap.ic_discovery_normal, R.mipmap.ic_hot_normal, R.mipmap.ic_mine_normal)
+
     // 被选中的图标
     private val mIconSelectIds = intArrayOf(R.mipmap.ic_home_selected, R.mipmap.ic_discovery_selected, R.mipmap.ic_hot_selected, R.mipmap.ic_mine_selected)
 
@@ -97,19 +101,22 @@ class MainActivity : BaseActivity() {
                 transaction.show(it)
             } ?: DiscoveryFragment.getInstance(mTitles[position]).let {
                 mDiscoveryFragment = it
-                transaction.add(R.id.fl_container, it, "discovery") }
+                transaction.add(R.id.fl_container, it, "discovery")
+            }
             2  //热门
             -> mHotFragment?.let {
                 transaction.show(it)
             } ?: HotFragment.getInstance(mTitles[position]).let {
                 mHotFragment = it
-                transaction.add(R.id.fl_container, it, "hot") }
+                transaction.add(R.id.fl_container, it, "hot")
+            }
             3 //我的
             -> mMineFragment?.let {
                 transaction.show(it)
             } ?: MineFragment.getInstance(mTitles[position]).let {
                 mMineFragment = it
-                transaction.add(R.id.fl_container, it, "mine") }
+                transaction.add(R.id.fl_container, it, "mine")
+            }
 
             else -> {
 

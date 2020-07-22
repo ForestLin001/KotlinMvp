@@ -265,7 +265,7 @@ class ExpandableTextView : LinearLayout, View.OnClickListener {
             return if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 resources.getDrawable(resId, context.theme)
             } else {
-                ContextCompat.getDrawable(context,resId)
+                ContextCompat.getDrawable(context, resId)
             }
         }
     }
@@ -281,7 +281,6 @@ class ExpandableTextView : LinearLayout, View.OnClickListener {
             view!!.startAnimation(alphaAnimation)
         }
     }
-
 
 
 }

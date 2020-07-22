@@ -113,10 +113,12 @@ class CircleImageView(context: Context, attrs: AttributeSet) : android.support.v
          * android.widget.ImageView
          */
         val TYPE_NONE = 0
+
         /**
          * 圆形
          */
         val TYPE_CIRCLE = 1
+
         /**
          * 圆角矩形
          */

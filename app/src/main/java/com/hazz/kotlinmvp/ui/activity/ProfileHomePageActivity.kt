@@ -56,7 +56,7 @@ class ProfileHomePageActivity : BaseActivity() {
             private val h = DensityUtil.dp2px(170f)
             private val color = ContextCompat.getColor(applicationContext, R.color.colorPrimary) and 0x00ffffff
             override fun onScrollChange(v: NestedScrollView, scrollX: Int, scrollY: Int, oldScrollX: Int, oldScrollY: Int) {
-                var tScrollY= scrollY
+                var tScrollY = scrollY
                 if (lastScrollY < h) {
                     tScrollY = Math.min(h, tScrollY)
                     mScrollY = if (tScrollY > h) h else tScrollY
@@ -69,11 +69,11 @@ class ProfileHomePageActivity : BaseActivity() {
         })
         buttonBarLayout.alpha = 0f
         toolbar.setBackgroundColor(0)
-         //返回
+        //返回
         toolbar.setNavigationOnClickListener { finish() }
 
 
-        refreshLayout.setOnRefreshListener {  mWebView.loadUrl("https://xuhaoblog.com/KotlinMvp") }
+        refreshLayout.setOnRefreshListener { mWebView.loadUrl("https://xuhaoblog.com/KotlinMvp") }
         refreshLayout.autoRefresh()
 
         mWebView.settings.javaScriptEnabled = true

@@ -73,8 +73,8 @@ class FollowAdapter(context: Context, dataList: ArrayList<HomeBean.Issue.Item>)
         /**
          * 设置嵌套水平的 RecyclerView
          */
-        recyclerView.layoutManager = LinearLayoutManager(mContext as Activity,LinearLayoutManager.HORIZONTAL,false)
-        recyclerView.adapter = FollowHorizontalAdapter(mContext,item.data.itemList,R.layout.item_follow_horizontal)
+        recyclerView.layoutManager = LinearLayoutManager(mContext as Activity, LinearLayoutManager.HORIZONTAL, false)
+        recyclerView.adapter = FollowHorizontalAdapter(mContext, item.data.itemList, R.layout.item_follow_horizontal)
 
     }
 

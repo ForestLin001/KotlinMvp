@@ -58,7 +58,7 @@ class CategoryDetailActivity : BaseActivity(), CategoryDetailContract.View {
                 .placeholder(R.color.color_darker_gray)
                 .into(imageView)
 
-        tv_category_desc.text ="#${categoryData?.description}#"
+        tv_category_desc.text = "#${categoryData?.description}#"
 
         collapsing_toolbar_layout.title = categoryData?.name
         collapsing_toolbar_layout.setExpandedTitleColor(Color.WHITE) //设置还没收缩时状态下字体颜色
@@ -112,7 +112,6 @@ class CategoryDetailActivity : BaseActivity(), CategoryDetailContract.View {
         super.onDestroy()
         mPresenter.detachView()
     }
-
 
 
 }

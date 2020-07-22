@@ -37,22 +37,22 @@
         android:id="@+id/tv_splash_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/tv_version_name"
         android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
         android:text="@string/splash_text"
         android:textColor="@color/color_black"
-        android:layout_above="@+id/tv_version_name"
-        android:layout_marginBottom="10dp"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tv_version_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:layout_marginBottom="60dp"
-        tools:text="v1.0"
         android:textColor="@color/color_gray"
-        android:textSize="12sp" />
+        android:textSize="12sp"
+        tools:text="v1.0" />
 
 </RelativeLayout>

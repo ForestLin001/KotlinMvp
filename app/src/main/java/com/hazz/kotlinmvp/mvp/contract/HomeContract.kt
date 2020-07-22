@@ -1,7 +1,6 @@
 package com.hazz.kotlinmvp.mvp.contract
 
 import com.hazz.kotlinmvp.base.IBaseView
-import com.hazz.kotlinmvp.base.IPresenter
 import com.hazz.kotlinmvp.mvp.model.bean.HomeBean
 
 /**
@@ -21,12 +20,12 @@ interface HomeContract {
         /**
          * 设置加载更多的数据
          */
-        fun setMoreData(itemList:ArrayList<HomeBean.Issue.Item>)
+        fun setMoreData(itemList: ArrayList<HomeBean.Issue.Item>)
 
         /**
          * 显示错误信息
          */
-        fun showError(msg: String,errorCode:Int)
+        fun showError(msg: String, errorCode: Int)
 
 
     }

@@ -1,7 +1,6 @@
 package com.hazz.kotlinmvp.mvp.model
 
 import com.hazz.kotlinmvp.mvp.model.bean.HomeBean
-import com.hazz.kotlinmvp.mvp.model.bean.TabInfoBean
 import com.hazz.kotlinmvp.net.RetrofitManager
 import com.hazz.kotlinmvp.rx.scheduler.SchedulerUtils
 import io.reactivex.Observable
@@ -24,7 +23,7 @@ class FollowModel {
     /**
      * 加载更多
      */
-    fun loadMoreData(url:String):Observable<HomeBean.Issue>{
+    fun loadMoreData(url: String): Observable<HomeBean.Issue> {
         return RetrofitManager.service.getIssueData(url)
                 .compose(SchedulerUtils.ioToMain())
     }

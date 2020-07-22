@@ -39,7 +39,7 @@ class VideoDetailAdapter(mContext: Context, data: ArrayList<HomeBean.Issue.Item>
             }
         }) {
 
-    private var textTypeface:Typeface?=null
+    private var textTypeface: Typeface? = null
 
     init {
         textTypeface = Typeface.createFromAsset(MyApplication.context.assets, "fonts/FZLanTingHeiS-L-GB-Regular.TTF")
@@ -87,7 +87,7 @@ class VideoDetailAdapter(mContext: Context, data: ArrayList<HomeBean.Issue.Item>
             data.type == "textCard" -> {
                 holder.setText(R.id.tv_text_card, data.data?.text!!)
                 //设置方正兰亭细黑简体
-                holder.getView<TextView>(R.id.tv_text_card).typeface =textTypeface
+                holder.getView<TextView>(R.id.tv_text_card).typeface = textTypeface
 
             }
             data.type == "videoSmallCard" -> {
@@ -95,14 +95,14 @@ class VideoDetailAdapter(mContext: Context, data: ArrayList<HomeBean.Issue.Item>
                     setText(R.id.tv_title, data.data?.title!!)
                     setText(R.id.tv_tag, "#${data.data.category} / ${durationFormat(data.data.duration)}")
                     setImagePath(R.id.iv_video_small_card, object : ViewHolder.HolderImageLoader(data.data.cover.detail) {
-                            override fun loadImage(iv: ImageView, path: String) {
-                                GlideApp.with(mContext)
-                                        .load(path)
-                                        .optionalTransform(GlideRoundTransform())
-                                        .placeholder(R.drawable.placeholder_banner)
-                                        .into(iv)
-                            }
-                        })
+                        override fun loadImage(iv: ImageView, path: String) {
+                            GlideApp.with(mContext)
+                                    .load(path)
+                                    .optionalTransform(GlideRoundTransform())
+                                    .placeholder(R.drawable.placeholder_banner)
+                                    .into(iv)
+                        }
+                    })
                 }
                 // 判断onItemClickRelatedVideo 并使用
                 holder.itemView.setOnClickListener { mOnItemClickRelatedVideo?.invoke(data) }

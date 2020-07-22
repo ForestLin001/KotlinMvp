@@ -34,7 +34,7 @@ class SearchPresenter : BasePresenter<SearchContract.View>(), SearchContract.Pre
                 }, { throwable ->
                     mRootView?.apply {
                         //处理异常
-                        showError(ExceptionHandle.handleException(throwable),ExceptionHandle.errorCode)
+                        showError(ExceptionHandle.handleException(throwable), ExceptionHandle.errorCode)
                     }
                 }))
     }
@@ -62,7 +62,7 @@ class SearchPresenter : BasePresenter<SearchContract.View>(), SearchContract.Pre
                     mRootView?.apply {
                         dismissLoading()
                         //处理异常
-                        showError(ExceptionHandle.handleException(throwable),ExceptionHandle.errorCode)
+                        showError(ExceptionHandle.handleException(throwable), ExceptionHandle.errorCode)
                     }
                 })
         )
@@ -84,7 +84,7 @@ class SearchPresenter : BasePresenter<SearchContract.View>(), SearchContract.Pre
                     }, { throwable ->
                         mRootView?.apply {
                             //处理异常
-                            showError(ExceptionHandle.handleException(throwable),ExceptionHandle.errorCode)
+                            showError(ExceptionHandle.handleException(throwable), ExceptionHandle.errorCode)
                         }
                     }))
         }

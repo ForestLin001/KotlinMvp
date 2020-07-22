@@ -54,8 +54,8 @@ class FollowHorizontalAdapter(mContext: Context, categoryList: ArrayList<HomeBea
 
             if (horizontalItemData?.tags != null && horizontalItemData.tags.size > 0) {
                 setText(R.id.tv_tag, "#${horizontalItemData.tags[0].name} / $timeFormat")
-            }else{
-                setText(R.id.tv_tag,"#$timeFormat")
+            } else {
+                setText(R.id.tv_tag, "#$timeFormat")
             }
 
             setOnItemClickListener(listener = View.OnClickListener {

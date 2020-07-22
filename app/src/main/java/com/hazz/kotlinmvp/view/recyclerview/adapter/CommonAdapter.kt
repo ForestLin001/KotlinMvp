@@ -3,9 +3,7 @@ package com.hazz.kotlinmvp.view.recyclerview.adapter
 import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
-
 import com.hazz.kotlinmvp.view.recyclerview.MultipleType
 import com.hazz.kotlinmvp.view.recyclerview.ViewHolder
 
@@ -46,7 +44,8 @@ abstract class CommonAdapter<T>(var mContext: Context, var mData: ArrayList<T>, 
 
     override fun getItemViewType(position: Int): Int {
         //多布局问题
-        return mTypeSupport?.getLayoutId(mData[position], position) ?: super.getItemViewType(position)
+        return mTypeSupport?.getLayoutId(mData[position], position)
+                ?: super.getItemViewType(position)
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {

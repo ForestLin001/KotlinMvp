@@ -11,7 +11,7 @@ import io.reactivex.Observable
  */
 class VideoDetailModel {
 
-    fun requestRelatedData(id:Long):Observable<HomeBean.Issue>{
+    fun requestRelatedData(id: Long): Observable<HomeBean.Issue> {
 
         return RetrofitManager.service.getRelatedData(id)
                 .compose(SchedulerUtils.ioToMain())

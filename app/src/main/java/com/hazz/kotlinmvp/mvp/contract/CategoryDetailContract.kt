@@ -10,22 +10,20 @@ import com.hazz.kotlinmvp.mvp.model.bean.HomeBean
  */
 interface CategoryDetailContract {
 
-    interface View:IBaseView{
+    interface View : IBaseView {
         /**
          *  设置列表数据
          */
-        fun setCateDetailList(itemList:ArrayList<HomeBean.Issue.Item>)
+        fun setCateDetailList(itemList: ArrayList<HomeBean.Issue.Item>)
 
-        fun showError(errorMsg:String)
-
-
+        fun showError(errorMsg: String)
 
 
     }
 
-    interface Presenter:IPresenter<View>{
+    interface Presenter : IPresenter<View> {
 
-        fun getCategoryDetailList(id:Long)
+        fun getCategoryDetailList(id: Long)
 
         fun loadMoreData()
     }

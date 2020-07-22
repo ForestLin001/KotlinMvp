@@ -3,9 +3,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:orientation="vertical"
     android:paddingTop="@dimen/padding_common_v"
-    android:paddingBottom="@dimen/padding_common_v"
-    android:orientation="vertical">
+    android:paddingBottom="@dimen/padding_common_v">
 
 
     <ImageView

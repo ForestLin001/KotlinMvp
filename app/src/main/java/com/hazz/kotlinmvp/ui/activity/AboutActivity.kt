@@ -5,7 +5,6 @@ import android.content.Intent
 import android.net.Uri
 import com.hazz.kotlinmvp.MyApplication
 import com.hazz.kotlinmvp.R
-import com.hazz.kotlinmvp.R.id.toolbar
 import com.hazz.kotlinmvp.base.BaseActivity
 import com.hazz.kotlinmvp.utils.AppUtils
 import com.hazz.kotlinmvp.utils.StatusBarUtil
@@ -26,7 +25,7 @@ class AboutActivity : BaseActivity() {
         StatusBarUtil.darkMode(this)
         StatusBarUtil.setPaddingSmart(this, toolbar)
 
-        tv_version_name.text ="v${AppUtils.getVerName(MyApplication.context)}"
+        tv_version_name.text = "v${AppUtils.getVerName(MyApplication.context)}"
         //返回
         toolbar.setNavigationOnClickListener { finish() }
         //访问 GitHub

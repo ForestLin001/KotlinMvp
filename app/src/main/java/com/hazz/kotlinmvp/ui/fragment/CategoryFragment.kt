@@ -32,7 +32,6 @@ class CategoryFragment : BaseFragment(), CategoryContract.View {
     private var mCategoryList = ArrayList<CategoryBean>()
 
 
-
     /**
      * 伴生对象
      */
@@ -58,7 +57,7 @@ class CategoryFragment : BaseFragment(), CategoryContract.View {
         mLayoutStatusView = multipleStatusView
 
         mRecyclerView.adapter = mAdapter
-        mRecyclerView.layoutManager =GridLayoutManager(activity,2)
+        mRecyclerView.layoutManager = GridLayoutManager(activity, 2)
         mRecyclerView.addItemDecoration(object : RecyclerView.ItemDecoration() {
             override fun getItemOffsets(outRect: Rect, view: View, parent: RecyclerView, state: RecyclerView.State?) {
                 val position = parent.getChildPosition(view)
@@ -100,7 +99,7 @@ class CategoryFragment : BaseFragment(), CategoryContract.View {
 
     }
 
-    override fun showError(errorMsg: String,errorCode:Int) {
+    override fun showError(errorMsg: String, errorCode: Int) {
         showToast(errorMsg)
         if (errorCode == ErrorStatus.NETWORK_ERROR) {
             multipleStatusView?.showNoNetwork()

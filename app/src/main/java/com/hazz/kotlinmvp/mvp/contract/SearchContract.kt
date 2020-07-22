@@ -19,7 +19,8 @@ interface SearchContract {
         /**
          * 设置搜索关键词返回的结果
          */
-        fun setSearchResult(issue:HomeBean.Issue)
+        fun setSearchResult(issue: HomeBean.Issue)
+
         /**
          * 关闭软件盘
          */
@@ -31,7 +32,7 @@ interface SearchContract {
         fun setEmptyView()
 
 
-        fun showError(errorMsg: String,errorCode:Int)
+        fun showError(errorMsg: String, errorCode: Int)
     }
 
 
@@ -44,7 +45,7 @@ interface SearchContract {
         /**
          * 查询搜索
          */
-        fun querySearchData(words:String)
+        fun querySearchData(words: String)
 
         /**
          * 加载更多
